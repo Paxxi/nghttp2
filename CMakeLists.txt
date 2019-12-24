@@ -470,7 +470,9 @@ add_subdirectory(python)
 add_subdirectory(tests)
 #add_subdirectory(tests/testdata)
 add_subdirectory(integration-tests)
+if(ENABLE_DOC)
 add_subdirectory(doc)
+endif()
 add_subdirectory(contrib)
 add_subdirectory(script)
 
@@ -520,6 +522,7 @@ message(STATUS "summary of build options:
       HPACK tools:    ${ENABLE_HPACK_TOOLS}
       Libnghttp2_asio:${ENABLE_ASIO_LIB}
       Examples:       ${ENABLE_EXAMPLES}
+      Documentation:  ${ENABLE_DOC}
       Python bindings:${ENABLE_PYTHON_BINDINGS}
       Threading:      ${ENABLE_THREADS}
 ")
